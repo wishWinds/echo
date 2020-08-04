@@ -10,40 +10,40 @@
         <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView identifier="YVRightCellViewClass" id="i5Y-nV-Hie" customClass="YVRightCellViewClass">
-            <rect key="frame" x="0.0" y="0.0" width="408" height="72"/>
+        <customView identifier="RightCellViewGestureRecognizers" id="i5Y-nV-Hie" customClass="RightCellViewGestureRecognizers">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="146"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="20" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="wk9-Z3-seY">
-                    <rect key="frame" x="10" y="10" width="388" height="62"/>
+                    <rect key="frame" x="10" y="10" width="388" height="136"/>
                     <view key="contentView" id="8I2-Uj-naX">
-                        <rect key="frame" x="0.0" y="0.0" width="388" height="62"/>
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bXR-yT-bzI">
-                                <rect key="frame" x="8" y="36" width="40" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Class" id="DyO-Pi-Agf">
+                                <rect key="frame" x="8" y="110" width="149" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="UIGestureRecognizers" id="DyO-Pi-Agf">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tcx-AD-5pE">
-                                <rect key="frame" x="10" y="10" width="368" height="16"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" drawsBackground="YES" id="dao-3e-H7M">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3bj-i9-5T3">
+                                <rect key="frame" x="8" y="84" width="372" height="16"/>
+                                <textFieldCell key="cell" title="Label" id="cpM-ye-Ncv">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="3bj-i9-5T3" firstAttribute="top" secondItem="bXR-yT-bzI" secondAttribute="bottom" constant="10" id="11p-yP-MiM"/>
                             <constraint firstItem="bXR-yT-bzI" firstAttribute="leading" secondItem="8I2-Uj-naX" secondAttribute="leading" constant="10" id="37z-zv-S8V"/>
-                            <constraint firstAttribute="trailing" secondItem="Tcx-AD-5pE" secondAttribute="trailing" constant="10" id="4Rm-3P-F9r"/>
-                            <constraint firstItem="Tcx-AD-5pE" firstAttribute="top" secondItem="bXR-yT-bzI" secondAttribute="bottom" constant="10" id="9Xq-WK-Xca"/>
-                            <constraint firstItem="Tcx-AD-5pE" firstAttribute="leading" secondItem="8I2-Uj-naX" secondAttribute="leading" constant="10" id="XPz-3F-G9J"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tcx-AD-5pE" secondAttribute="bottom" constant="10" id="aUj-Pk-NcY"/>
+                            <constraint firstAttribute="trailing" secondItem="3bj-i9-5T3" secondAttribute="trailing" constant="10" id="NyL-1Q-fyQ"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3bj-i9-5T3" secondAttribute="bottom" constant="10" id="TjH-7m-ohj"/>
                             <constraint firstItem="bXR-yT-bzI" firstAttribute="top" secondItem="8I2-Uj-naX" secondAttribute="top" constant="10" id="ulB-Z7-a4A"/>
+                            <constraint firstItem="3bj-i9-5T3" firstAttribute="leading" secondItem="8I2-Uj-naX" secondAttribute="leading" constant="10" id="zuk-YB-hw8"/>
                         </constraints>
                     </view>
                     <color key="fillColor" name="pluginBgColor"/>
@@ -56,7 +56,7 @@
                 <constraint firstItem="wk9-Z3-seY" firstAttribute="leading" secondItem="i5Y-nV-Hie" secondAttribute="leading" constant="10" id="Ld3-ch-FDA"/>
             </constraints>
             <connections>
-                <outlet property="clsInfoLabel" destination="Tcx-AD-5pE" id="vWw-Ec-duL"/>
+                <outlet property="clsInfoLabel" destination="3bj-i9-5T3" id="tMa-IE-3yS"/>
             </connections>
             <point key="canvasLocation" x="-19" y="-9"/>
         </customView>

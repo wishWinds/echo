@@ -19,7 +19,10 @@
 -(void)fillData:(NSDictionary*)data
 {
     NSString *inherit = data[@"inherit"] ?: @"";
-    self.clsInfoLabel.stringValue = inherit;
+    NSString *viewController = data[@"assign_to_viewcontroller"];
+    NSString *address = data[@"address"];
+    NSString *content = [NSString stringWithFormat:@"%@\nUIViewController: %@\nAddress: %@", inherit, viewController, address];
+    self.clsInfoLabel.stringValue = content;
 }
 
 @end

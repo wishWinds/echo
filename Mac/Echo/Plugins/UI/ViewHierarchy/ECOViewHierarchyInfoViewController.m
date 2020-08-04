@@ -7,6 +7,7 @@
 //
 
 #import "ECOViewHierarchyInfoViewController.h"
+#import "YVRightCellViewClass.h"
 #import "YVRightCellViewInfo.h"
 #import "YVRightCellViewFrame.h"
 
@@ -40,16 +41,18 @@ NSTableViewDelegate>
 }
 #pragma mark - NSTableViewDataSource Methods
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return 3;
+    return 4;
 }
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     if (row == 0) {
         return 150;
-    }
-    if (row == 1) {
+    } else if (row == 1) {
         return 520;
+    } else if (row == 2) {
+        return 115;
+    } else {
+        return 500;
     }
-    return 115;
 }
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     YVRightCellBase * retView;
@@ -59,6 +62,8 @@ NSTableViewDelegate>
         retView = [YVRightCellViewInfo makeView:tableView owner:self identifer:@"YVRightCellViewInfo"];
     }else if (row == 2) {
         retView = [YVRightCellViewFrame makeView:tableView owner:self identifer:@"YVRightCellViewFrame"];
+    } else if (row == 3) {
+        retView = [YVRightCellBase makeView:tableView owner:self identifer:@"RightCellViewGestureRecognizers"];
     }
     __weak typeof(self) weakSelf = self;
     retView.editBlock = ^(NSDictionary *info) {

@@ -90,6 +90,8 @@
 		D5B1B08C22F40CD0004B8D60 /* ECOOlNodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1B08B22F40CD0004B8D60 /* ECOOlNodeFactory.m */; };
 		D5B1B08E22F40CFD004B8D60 /* ECOOlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1B08D22F40CFD004B8D60 /* ECOOlNode.m */; };
 		D5C8C7EA22FBC21F00258F3D /* ECOString.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C8C7E822FBC21F00258F3D /* ECOString.m */; };
+		FE37FBE824D956EA00464ECD /* RightCellViewGestureRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = FE37FBE724D956EA00464ECD /* RightCellViewGestureRecognizers.m */; };
+		FE37FBEA24D9575F00464ECD /* RightCellViewGestureRecognizers.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE37FBE924D9575F00464ECD /* RightCellViewGestureRecognizers.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,6 +241,9 @@
 		D5C8C7E922FBC21F00258F3D /* ECOString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOString.h; sourceTree = "<group>"; };
 		D99B640572F55C82693F1351 /* libPods-Echo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Echo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB08AC33675279D4FFFAD47F /* Pods-Echo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Echo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Echo/Pods-Echo.release.xcconfig"; sourceTree = "<group>"; };
+		FE37FBE624D956EA00464ECD /* RightCellViewGestureRecognizers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightCellViewGestureRecognizers.h; sourceTree = "<group>"; };
+		FE37FBE724D956EA00464ECD /* RightCellViewGestureRecognizers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightCellViewGestureRecognizers.m; sourceTree = "<group>"; };
+		FE37FBE924D9575F00464ECD /* RightCellViewGestureRecognizers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightCellViewGestureRecognizers.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +459,9 @@
 				6991EF8422E7349000AE7D28 /* YVRightCellViewInfo.h */,
 				6991EF8922E7349000AE7D28 /* YVRightCellViewInfo.m */,
 				6991EF8822E7349000AE7D28 /* YVRightCellViewInfo.xib */,
+				FE37FBE624D956EA00464ECD /* RightCellViewGestureRecognizers.h */,
+				FE37FBE724D956EA00464ECD /* RightCellViewGestureRecognizers.m */,
+				FE37FBE924D9575F00464ECD /* RightCellViewGestureRecognizers.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -664,6 +672,7 @@
 				6950EC5022A6727E00CB9FC1 /* json-viewer-light-theme.css in Resources */,
 				6974925F23151D390005E6BC /* YVRightCellViewClass.xib in Resources */,
 				6991F00722E7349100AE7D28 /* left_gray.png in Resources */,
+				FE37FBEA24D9575F00464ECD /* RightCellViewGestureRecognizers.xib in Resources */,
 				69C6241222F9279D00846B61 /* ECOTemplateH5ViewController.xib in Resources */,
 				6991F00522E7349100AE7D28 /* right_blue.png in Resources */,
 				6991F00A22E7349100AE7D28 /* refresh.png in Resources */,
@@ -757,6 +766,7 @@
 				6991F01922E7349100AE7D28 /* SCNNode+YVIdentifier.m in Sources */,
 				69708509228CFED30075CFBA /* ECOPacketsDispatcher.m in Sources */,
 				69A5EE16228C1A2D0093D253 /* ECOPluginModel.m in Sources */,
+				FE37FBE824D956EA00464ECD /* RightCellViewGestureRecognizers.m in Sources */,
 				D5C8C7EA22FBC21F00258F3D /* ECOString.m in Sources */,
 				6991F01D22E7349100AE7D28 /* YVNodeBackTracking.m in Sources */,
 				6991F00F22E7349100AE7D28 /* YVRightCellViewInfo.m in Sources */,
@@ -906,11 +916,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Echo/Echo.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TAXNVNJP42;
 				INFOPLIST_FILE = Echo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -930,11 +940,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Echo/Echo.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TAXNVNJP42;
 				INFOPLIST_FILE = Echo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

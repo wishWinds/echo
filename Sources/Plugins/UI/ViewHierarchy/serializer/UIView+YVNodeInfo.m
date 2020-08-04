@@ -29,6 +29,7 @@
     NSNumber *_shadowRadius = [self _ecoShadowRadius];
     NSNumber *_shadowOffsetW = [self _ecoShadowOffsetW];
     NSNumber *_shadowOffsetH = [self _ecoShadowOffsetH];
+    NSString *_gestures = [self _echoGestures];
     
     NSDictionary * selfinfo = @{
              @"snapshot":_snapshot,
@@ -46,7 +47,8 @@
              @"sOpacity": _shadowOpacity,
              @"sRadius": _shadowRadius,
              @"sOffW": _shadowOffsetW,
-             @"sOffH": _shadowOffsetH
+             @"sOffH": _shadowOffsetH,
+             @"gestures": _gestures
              };
     NSDictionary * superinfo = [super nodeInfo];
     NSMutableDictionary * result = [NSMutableDictionary dictionary];
@@ -206,5 +208,18 @@
 
 - (NSNumber *)_ecoShadowOffsetH {
     return @(self.layer.shadowOffset.height);
+}
+
+- (NSString *)_echoGestures {
+    __block NSString *gestures = @"";
+    [self.gestureRecognizers enumerateObjectsUsingBlock:^(__kindof UIGestureRecognizer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (@available(iOS 11.0, *)) {
+            gestures = [gestures stringByAppendingFormat:@"%@(%@)\n", NSStringFromClass([obj class]), obj.name];
+        } else {
+            gestures = [gestures stringByAppendingFormat:@"%@\n", NSStringFromClass([obj class])];
+        }
+    }];
+    
+    return gestures;
 }
 @end
